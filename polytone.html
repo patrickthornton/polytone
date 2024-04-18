@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="polytone!"/>
+        <link href="polytone.css" rel="stylesheet">
+
+        <title>polytone</title>
+    </head>
+    <body>
+        polytone.
+
+        <div id="refzone">
+            <label for="ref">a4 = </label>
+            <input type="text" maxlength="5" size="6" value="440" autocomplete="off" id="ref"></input><br><br>
+        </div>
+
+        <!-- note these four tone blocks are virtually identical -->
+        <div id="tone1" class="tones">
+            <label for="hzval1">hz:</label>
+            <input id="hzval1" value="440" autocomplete="off"/>&nbsp;&nbsp;&nbsp;
+            <label for="times1">times:</label>
+            <input type="text" maxlength="12" placeholder="factor" autocomplete="off" id="times1" size="5"></input><br><br>
+            <input type="range" min="1513" max="5000" value="3073.4314741065677" class="slider hzslider" id="hz1"/><br><br>
+
+            <select id="type1">
+                <option value="sine">sine</option>
+                <option value="square">square</option>
+                <option value="triangle">triangle</option>
+                <option value="sawtooth">sawtooth</option>
+            </select>&nbsp;&nbsp;&nbsp;
+
+            <label for="vol1">gain:</label>
+            <input type="range" min="1" max="100" value="35" class="slider volslider" id="vol1"/><br><br>
+
+            <input type="text" maxlength="3" placeholder="note" autocomplete="off" id="pitch1" size="3"></input>&nbsp;&nbsp;&nbsp;
+
+            <button id="playstop1" onclick="playstop1()">play</button>
+        </div>
+
+        <div id="tone2" class="tones">
+            <label for="hzval2">hz:</label>
+            <input id="hzval2" value="440" autocomplete="off"/>&nbsp;&nbsp;&nbsp;
+            <label for="times2">times:</label>
+            <input type="text" maxlength="12" placeholder="factor" autocomplete="off" id="times2" size="5"></input><br><br>
+            <input type="range" min="1513" max="5000" value="3073.4314741065677" class="slider hzslider" id="hz2"/><br><br>
+
+            <select id="type2">
+                <option value="sine">sine</option>
+                <option value="square">square</option>
+                <option value="triangle">triangle</option>
+                <option value="sawtooth">sawtooth</option>
+            </select>&nbsp;&nbsp;&nbsp;
+
+            <label for="vol2">gain:</label>
+            <input type="range" min="1" max="100" value="35" class="slider volslider" id="vol2"/><br><br>
+
+            <input type="text" maxlength="3" placeholder="note" autocomplete="off" id="pitch2" size="3"></input>&nbsp;&nbsp;&nbsp;
+
+            <button id="playstop2" onclick="playstop2()">play</button>
+        </div>
+
+        <div id="tone3" class="tones">
+            <label for="hzval3">hz:</label>
+            <input id="hzval3" value="440" autocomplete="off"/>&nbsp;&nbsp;&nbsp;
+            <label for="times3">times:</label>
+            <input type="text" maxlength="12" placeholder="factor" autocomplete="off" id="times3" size="5"></input><br><br>
+            <input type="range" min="1513" max="5000" value="3073.4314741065677" class="slider hzslider" id="hz3"/><br><br>
+
+            <select id="type3">
+                <option value="sine">sine</option>
+                <option value="square">square</option>
+                <option value="triangle">triangle</option>
+                <option value="sawtooth">sawtooth</option>
+            </select>&nbsp;&nbsp;&nbsp;
+
+            <label for="vol3">gain:</label>
+            <input type="range" min="1" max="100" value="35" class="slider volslider" id="vol3"/><br><br>
+
+            <input type="text" maxlength="3" placeholder="note" autocomplete="off" id="pitch3" size="3"></input>&nbsp;&nbsp;&nbsp;
+
+            <button id="playstop3" onclick="playstop3()">play</button>
+        </div>
+
+        <div id="tone4" class="tones">
+            <label for="hzval4">hz:</label>
+            <input id="hzval4" value="440" autocomplete="off"/>&nbsp;&nbsp;&nbsp;
+            <label for="times4">times:</label>
+            <input type="text" maxlength="12" placeholder="factor" autocomplete="off" id="times4" size="5"></input><br><br>
+            <input type="range" min="1513" max="5000" value="3073.4314741065677" class="slider hzslider" id="hz4"/><br><br>
+
+            <select id="type4">
+                <option value="sine">sine</option>
+                <option value="square">square</option>
+                <option value="triangle">triangle</option>
+                <option value="sawtooth">sawtooth</option>
+            </select>&nbsp;&nbsp;&nbsp;
+
+            <label for="vol4">gain:</label>
+            <input type="range" min="1" max="100" value="35" class="slider volslider" id="vol4"/><br><br>
+
+            <input type="text" maxlength="3" placeholder="note" autocomplete="off" id="pitch4" size="3"></input>&nbsp;&nbsp;&nbsp;
+
+            <button id="playstop4" onclick="playstop4()">play</button>
+        </div>
+
+        <div id="tone5" class="tones">
+            <label for="hzval5">hz:</label>
+            <input id="hzval5" value="440" autocomplete="off"/>&nbsp;&nbsp;&nbsp;
+            <label for="times5">times:</label>
+            <input type="text" maxlength="12" placeholder="factor" autocomplete="off" id="times5" size="5"></input><br><br>
+            <input type="range" min="1513" max="5000" value="3073.4314741065677" class="slider hzslider" id="hz5"/><br><br>
+
+            <select id="type5">
+                <option value="sine">sine</option>
+                <option value="square">square</option>
+                <option value="triangle">triangle</option>
+                <option value="sawtooth">sawtooth</option>
+            </select>&nbsp;&nbsp;&nbsp;
+
+            <label for="vol5">gain:</label>
+            <input type="range" min="1" max="100" value="35" class="slider volslider" id="vol5"/><br><br>
+
+            <input type="text" maxlength="3" placeholder="note" autocomplete="off" id="pitch5" size="3"></input>&nbsp;&nbsp;&nbsp;
+
+            <button id="playstop5" onclick="playstop5()">play</button>
+        </div>
+
+        <div id="tone6" class="tones">
+            <label for="hzval6">hz:</label>
+            <input id="hzval6" value="440" autocomplete="off"/>&nbsp;&nbsp;&nbsp;
+            <label for="times6">times:</label>
+            <input type="text" maxlength="12" placeholder="factor" autocomplete="off" id="times6" size="6"></input><br><br>
+            <input type="range" min="1513" max="5000" value="3073.4314741065677" class="slider hzslider" id="hz6"/><br><br>
+
+            <select id="type6">
+                <option value="sine">sine</option>
+                <option value="square">square</option>
+                <option value="triangle">triangle</option>
+                <option value="sawtooth">sawtooth</option>
+            </select>&nbsp;&nbsp;&nbsp;
+
+            <label for="vol6">gain:</label>
+            <input type="range" min="1" max="100" value="35" class="slider volslider" id="vol6"/><br><br>
+
+            <input type="text" maxlength="3" placeholder="note" autocomplete="off" id="pitch6" size="3"></input>&nbsp;&nbsp;&nbsp;
+
+            <button id="playstop6" onclick="playstop6()">play</button>
+        </div>
+
+        <script src="tones.js"></script>
+        <script src="slider.js"></script>
+        <script src="notes.js"></script>
+    </body>
+    </html>
